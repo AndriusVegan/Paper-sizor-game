@@ -1,10 +1,13 @@
-
-import './App.css';
+import "./App.css";
+import ScoreBoard from "./components/ScoreBoard";
+import Hands from "./components/Hands";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       Go Vegan
+      <ScoreBoard />
+      <Hands />
     </div>
   );
 }

@@ -1,0 +1,38 @@
+.scoreboard {
+  width: 700px;
+  height: 150px;
+  margin-top: 48px;
+  border: 1px solid white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.scoreboard__gameName {
+  padding: 30px;
+}
+
+.scoreboard__score {
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: white;
+  margin-right: 30px;
+  width: 150px;
+  height: 114px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreboard__score > h1 {
+  color: #565468;
+  font-size: 56px;
+}
+
+.scoreboard__score p {
+  color: #2a45c2;
+}
