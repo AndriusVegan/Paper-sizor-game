@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectComputerHand, selectUserHand, setComputerHand } from "../slices/gameSlice";
+import {
+  selectComputerHand,
+  selectUserHand,
+  setComputerHand,
+} from "../slices/gameSlice";
 import "./Contest.css";
 
 const Contest = () => {
@@ -8,21 +12,19 @@ const Contest = () => {
   const computerHand = useSelector(selectComputerHand);
   const dispatch = useDispatch();
   const hands = ["Rock", "Paper", "Scissors"];
-  const [TimeOut, setTimeOut] = useState(false);
+  const [timeOut, setTimeOut] = useState(false);
 
   useEffect(() => {
-    let cpHand = hands[Math.floor(Math.random() * hands.length)]
-    
+    let cpHand = hands[Math.floor(Math.random() * hands.length)];
+
     setTimeOut(function () {
-    dispatch(setComputerHand(cpHand))
+      dispatch(setComputerHand(cpHand));
     }, 500);
     setTimeOut(function () {
       setTimeOut(true);
-    }, 1000)
-  },[userHand]);
+    }, 1000);
+  }, [userHand]);
 
-
-  
   return (
     <div className="contest">
       <div className="contest__container">
@@ -32,7 +34,10 @@ const Contest = () => {
         </div>
         <div className="contest__handContainer">
           <h1>House picked</h1>
-          <img src={`/images/Hand${!computerHand ? "Blank" : computerHand}.png`} alt="computer hand" />
+          <img
+            src={`/images/Hand${!computerHand ? "Blank" : computerHand}.png`}
+            alt="computer hand"
+          />
         </div>
       </div>
     </div>
