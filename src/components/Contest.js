@@ -13,14 +13,14 @@ const Contest = () => {
   useEffect(() => {
     let cpHand = hands[Math.floor(Math.random() * hands.length)]
     setTimeOut(function (){
-dispatch(setComputerHand(cpHand))
+    dispatch(setComputerHand(cpHand))
     }, 500);
     setTimeOut(function () {
       setTimeOut(true);
     }, 1000)
   },[userHand]);
 
-  
+
   
   return (
     <div className="contest">
