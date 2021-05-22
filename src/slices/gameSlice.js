@@ -14,7 +14,7 @@ const gameSlice = createSlice({
       state.userHand = action.payload;
     },
     setComputerHand: (state, action) => {
-      state.userComputer = action.payload;
+      state.computerHand = action.payload;
     },
     setScore: (state, action) => {
       state.score += action.payload;
