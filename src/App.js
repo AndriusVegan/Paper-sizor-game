@@ -11,7 +11,6 @@ function App() {
     <div className="app">
       <ScoreBoard />
       {!userHand ? <Hands /> : <Contest />}
-      <Hands />
     </div>
   );
 }
