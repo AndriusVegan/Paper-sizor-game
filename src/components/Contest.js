@@ -17,7 +17,7 @@ const Contest = () => {
   useEffect(() => {
     let cpHand = hands[Math.floor(Math.random() * hands.length)];
 
-    setTimeOut(function () {
+    setTimeout(function () {
       dispatch(setComputerHand(cpHand));
     }, 500);
     setTimeOut(function () {

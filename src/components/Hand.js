@@ -8,9 +8,9 @@ const Hand = ({ value }) => {
 
   const pickHand = (e, value) => {
     dispatch(setUserHand(value));
+    console.log(setUserHand(value), "is setUserhand succesful?");
   };
 
-  console.log(selectUserHand(value), "go vegan");
   return (
     <div className="hand" onClick={(e) => pickHand(e, value)}>
       <img src={`/images/Hand${value}.png`} alt="HandUser" />

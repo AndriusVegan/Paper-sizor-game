@@ -1,25 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    userHand: "",
-    computerHand: "",
-    score: 0,
-}
+  userHand: "",
+  computerHand: "",
+  score: 0,
+};
 
 const gameSlice = createSlice({
-    name: "game",
-    initialState,
-    reducers: {
-        setUserHand: (state, action) => {
-            state.userHand = action.payload;
-        },
-        setComputerHand: (state, action) => {
-            state.userComputer = action.payload;
-        },
-        setScore: (state, action) => {
-            state.score = action.payload;
-        },
+  name: "game",
+  initialState,
+  reducers: {
+    setUserHand: (state, action) => {
+      state.userHand = action.payload;
     },
+    setComputerHand: (state, action) => {
+      state.userComputer = action.payload;
+    },
+    setScore: (state, action) => {
+      state.score += action.payload;
+    },
+  },
 });
 
 export const { setUserHand, setComputerHand, setScore } = gameSlice.actions;
