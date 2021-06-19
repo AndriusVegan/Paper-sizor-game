@@ -4,9 +4,9 @@ import Hands from "./components/Hands";
 import Contest from "./components/Contest";
 import { useSelector } from "react-redux";
 import { selectUserHand } from "./slices/gameSlice";
+import { selectUserName } from "./slices/userSlice";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/Login";
-import { selectUserName } from "./slices/userSlice";
 import Header from "./components/Header";
 function App() {
   const userHand = useSelector(selectUserHand);
@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/home">
             <Header />
             <ScoreBoard />
-            {!userName ? <Hands /> : <Contest />}
+            {!userHand ? <Hands /> : <Contest />}
           </Route>
         </Switch>
       </Router>

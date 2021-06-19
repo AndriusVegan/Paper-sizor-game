@@ -1,0 +1,27 @@
+.layer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameOver__text {
+  background-color: white;
+  border-radius: 8px;
+  width: 500px;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 36px;
+  z-index: 10;
+}
